@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-playfair: 'Playfair Display', Georgia, serif;
+    --font-inter: 'Inter', system-ui, sans-serif;
+  }
+
+  body {
+    @apply bg-watercolor-50 text-gray-800;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+
+  p {
+    @apply font-sans;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply bg-watercolor-600 hover:bg-watercolor-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200;
+  }
+
+  .btn-secondary {
+    @apply bg-sage-600 hover:bg-sage-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200;
+  }
+
+  .btn-outline {
+    @apply border-2 border-watercolor-600 text-watercolor-700 hover:bg-watercolor-50 font-medium py-3 px-6 rounded-lg transition-colors duration-200;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300;
+  }
+
+  .watercolor-texture {
+    background-image: 
+      radial-gradient(circle at 20% 50%, rgba(200, 157, 127, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(95, 131, 96, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 40% 90%, rgba(219, 189, 168, 0.12) 0%, transparent 50%);
+  }
+
+  .rich-text h1 {
+    @apply text-4xl font-bold mb-6 text-watercolor-900;
+  }
+
+  .rich-text h2 {
+    @apply text-3xl font-bold mb-5 text-watercolor-800;
+  }
+
+  .rich-text h3 {
+    @apply text-2xl font-semibold mb-4 text-watercolor-700;
+  }
+
+  .rich-text p {
+    @apply text-lg mb-4 leading-relaxed text-gray-700;
+  }
+
+  .rich-text ul, .rich-text ol {
+    @apply mb-4 ml-6;
+  }
+
+  .rich-text li {
+    @apply mb-2;
+  }
+
+  .rich-text a {
+    @apply text-sage-600 hover:text-sage-700 underline;
+  }
+
+  .rich-text blockquote {
+    @apply border-l-4 border-watercolor-400 pl-4 italic my-6 text-gray-600;
+  }
+
+  .rich-text img {
+    @apply rounded-lg my-6;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5ede8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b58565;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9d6f54;
+}

@@ -1,0 +1,28 @@
+#!/bin/bash
+
+echo ""
+echo "🔐 OBTENER MANAGEMENT TOKEN DE CONTENTFUL"
+echo "=========================================="
+echo ""
+echo "OPCIÓN 1 - Desde tu Space:"
+echo "  URL: https://app.contentful.com/spaces/35v4mqw0out6/api/keys"
+echo "  → Clic en la pestaña 'Content management tokens'"
+echo "  → Clic en 'Generate personal token'"
+echo ""
+echo "OPCIÓN 2 - Desde tu perfil (RECOMENDADO):"
+echo "  URL: https://app.contentful.com/account/profile/cma_tokens"
+echo "  → Clic en 'Generate personal token'"
+echo "  → Dale un nombre: 'Setup Script'"
+echo "  → Copia el token"
+echo ""
+echo "IMPORTANTE:"
+echo "  ⚠️  El token solo se muestra UNA VEZ"
+echo "  ⚠️  Guárdalo en un lugar seguro"
+echo ""
+echo "Cuando lo tengas, ejecuta:"
+echo "  echo 'CONTENTFUL_MANAGEMENT_TOKEN=tu_token' >> .env.local"
+echo ""
+echo "Abriendo navegador..."
+sleep 2
+open "https://app.contentful.com/account/profile/cma_tokens"
+
