@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getCollectionBySlug, getAllCollections } from '@/lib/api';
@@ -56,12 +55,10 @@ export default async function CollectionDetailPage({ params }: { params: { slug:
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative h-[50vh] min-h-[400px]">
-        <Image
+        <img
           src={coverImageUrl}
           alt={collection.fields.name}
-          fill
-          className="object-cover"
-          priority
+          className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60"></div>
         

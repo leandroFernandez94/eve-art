@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import Image from 'next/image';
 import { getAllCollections } from '@/lib/api';
 import { getImageFromAsset } from '@/lib/types';
 
@@ -45,11 +44,10 @@ export default async function CollectionsPage() {
                   className="card overflow-hidden group"
                 >
                   <div className="relative h-64 bg-gray-200">
-                    <Image
+                    <img
                       src={coverImageUrl}
                       alt={collection.fields.name}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
